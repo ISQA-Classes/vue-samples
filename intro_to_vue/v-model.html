@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>v-model</title>
+    <script src="https://unpkg.com/vue"></script>
+<meta charset="UTF-8">
+</head>
+<body>
+    <div id="app">
+        <h2>{{ message }}</h2>     
+        <input v-model="message" class="form-control">
+    </div>
+
+<script>
+   const app = new Vue ({ 
+    el: '#app',
+    
+    data: {
+        message: 'Enter your name ..',
+        
+        }
+    });
+
+</script>
+</body>
+</html>
