@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events and Methods</title>
+        
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div id="app">
+        <h1>{{ lesson }}</h1>
+        <br>
+        <h3>Counter: {{ counter}}</h3>
+        <button v-on:click="incrementCounter">Increment ++</button>
+        
+    </div>
+<<script src="https://unpkg.com/vue"></script>
+<script>
+   const app = new Vue ({ 
+    el: '#app',
+    
+    data: {
+        lesson: "Events and Methods",
+        counter: 0
+    },
+    methods: {
+        incrementCounter(){
+            this.counter += 1;
+            console.log(this.counter);
+            if (this.counter === 5 ) {
+                alert("Counter is at 5!")
+            }
+        }
+        
+    }  
+    });
+</script>
+<style>
+
+</style>
+
+
+</body>
+</html>
