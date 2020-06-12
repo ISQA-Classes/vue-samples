@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>List Rendering</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+    <div id="app">
+        <h1>Users List</h1>
+        <ul>
+            <li v-for="id in ids">{{ id }}</li>
+        </ul>
+        <hr>
+        <p>Numbers from 1 to 5</p>
+        <p v-for="number in 5">{{ number }}</p>
+        <br>
+    </div>
+    
+<script src="https://unpkg.com/vue"></script>
+<script>
+var app = new Vue({
+    el: "#app",
+    data: {
+        ids: ["groyce", "richardm", "mmendez", "knguyen", "kimgrant"]
+    }
+}) 
+</script>
+</body>
+</html>
