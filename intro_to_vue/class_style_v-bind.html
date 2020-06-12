@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class style v-bind</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+</head>
+<body>
+
+    <div id="app">
+        <div class="row justify-content-center mt-3">
+            <div v-bind:class="{ circle: flag, ellipse: !flag }"
+                 v-bind:style="styleObject"></div>
+        </div>
+
+        <div class="row justify-content-center mt-3">
+            <button class="btn btn-primary" @click="changeShape">Change Shape</button>
+        </div>
+    </div>
+    
+<script src="https://unpkg.com/vue"></script>
+<script>
+var app = new Vue({
+    el: "#app",
+    data: {
+        flag: true,
+        styleObject: { 
+            backgroundColor: 'blue' 
+            
+        }
+    },
+    methods: {
+        changeShape() {
+            this.flag = !this.flag;
+        }
+    }
+}) 
+</script>
+<style>
+    .circle {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    }
+    
+    .ellipse {
+        float: left;
+        shape-outside: ellipse();
+        clip-path: ellipse();
+        width: 300px;
+        height: 500px;
+    }
+</style>
+
+</body>
+</html>
